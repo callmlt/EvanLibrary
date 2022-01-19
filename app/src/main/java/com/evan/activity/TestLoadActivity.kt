@@ -1,9 +1,9 @@
 package com.evan.activity
 
-import com.chad.library.adapter.base.BaseQuickAdapter
 import com.evan.adapter.MainItemAdapter
 import com.evan.databinding.ActivityTestLoadBinding
 import com.evan.fragment.BottomDialogFragmentTest
+import com.evan.lib.adapter.BaseEvanAdapter
 import com.evan.lib.util.WeakHandler
 import com.evan.model.MainModel
 import kotlinx.coroutines.GlobalScope
@@ -42,7 +42,7 @@ class TestLoadActivity:BaseKotlinActivity<ActivityTestLoadBinding>(){
 
         }, 5000)
 
-        adapter!!.setOnItemClickListener(BaseQuickAdapter.OnItemClickListener { adapter, view, position ->
+        adapter!!.setOnItemClickListener(BaseEvanAdapter.OnItemClickListener { adapter, view, position ->
             when {
                 position == 0 -> mainModel?.login("156116565", "4564654")
                 position == 1 -> BottomDialogFragmentTest().show(supportFragmentManager, "sdfsdf")

@@ -41,7 +41,7 @@ dependencies {
     implementation 'androidx.recyclerview:recyclerview:1.1.0'
     implementation 'com.scwang.smartrefresh:SmartRefreshLayout:1.1.2'  //1.0.5及以前版本的老用户升级需谨慎，API改动过大
     implementation 'com.scwang.smartrefresh:SmartRefreshHeader:1.1.2'  //没有使用特殊Header，可以不加这行
-    implementation 'com.github.CymChad:BaseRecyclerViewAdapterHelper:2.9.24'
+    //implementation 'com.github.CymChad:BaseRecyclerViewAdapterHelper:2.9.24'
     implementation 'com.google.android.material:material:1.2.1'
 
     implementation 'com.squareup.retrofit2:retrofit:2.9.0'
@@ -60,9 +60,8 @@ dependencies {
 
     implementation project(":evanlib")
     implementation "org.jetbrains.kotlin:kotlin-stdlib:$kotlin_version"
-
     //加载框
-    //implementation 'com.github.ybq:Android-SpinKit:1.4.0'
+    //implementation 'com.github.callmlt:EvanLibrary:1.1'
 }
 repositories {
     mavenCentral()
