@@ -3,6 +3,8 @@ package com.evan.lib.base
 import android.os.Bundle
 import android.view.View
 import androidx.appcompat.app.AppCompatActivity
+import androidx.lifecycle.ViewModel
+import androidx.lifecycle.ViewModelProvider
 import androidx.viewbinding.ViewBinding
 import com.evan.lib.R
 import com.evan.lib.databinding.CommonTitleViewBinding
@@ -39,10 +41,31 @@ abstract class BaseAppCompatActivity<T : ViewBinding> : AppCompatActivity(), Swi
         initData()
     }
 
+
     override fun onPostCreate(savedInstanceState: Bundle?) {
         super.onPostCreate(savedInstanceState)
         helper.onPostCreate()
     }
+
+
+    /****获取ViewBinding  */
+    protected abstract fun getViewBinding(): T
+
+    /**
+     * 加载布局文件之前执行
+     * 即setContentView 之前执行
+     */
+    protected open fun beforeView() {}
+
+    /**
+     * 初始化Views
+     */
+    protected open fun initViews() {}
+
+    /**
+     * 加载数据
+     */
+    protected open fun initData() {}
 
     // 初始化 【右滑返回】
     private fun initSwipeBack() {
@@ -65,7 +88,6 @@ abstract class BaseAppCompatActivity<T : ViewBinding> : AppCompatActivity(), Swi
         return helper.getSwipeBackLayout()
     }
 
-
     override fun setSwipeBackEnable(enable: Boolean) {
         mSwipeBackLayout.setEnableGesture(enable)
     }
@@ -73,28 +95,6 @@ abstract class BaseAppCompatActivity<T : ViewBinding> : AppCompatActivity(), Swi
     override fun scrollToFinishActivity() {
         Utils.convertActivityToTranslucent(this)
         mSwipeBackLayout.scrollToFinishActivity()
-    }
-
-    /**
-     * 加载布局文件之前执行
-     * 即setContentView 之前执行
-     */
-    protected open fun beforeView() {
-
-    }
-
-    /**
-     * 初始化Views
-     */
-    protected open fun initViews() {
-
-    }
-
-    /**
-     * 加载数据
-     */
-    protected open fun initData() {
-
     }
 
     override fun onDestroy() {
@@ -130,9 +130,6 @@ abstract class BaseAppCompatActivity<T : ViewBinding> : AppCompatActivity(), Swi
             e.printStackTrace()
         }
     }
-
-    /****获取ViewBinding  */
-    protected abstract fun getViewBinding(): T
 
     /****页面返回*/
     override fun onBackPressed() {

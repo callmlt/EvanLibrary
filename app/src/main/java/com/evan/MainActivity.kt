@@ -8,14 +8,14 @@ import com.evan.view.helper.MainHelper
 class MainActivity : BaseKotlinActivity<ActivityMainBinding>() {
 
     override fun getViewBinding(): ActivityMainBinding {
-        return ActivityMainBinding.inflate(layoutInflater)
+        return ActivityMainBinding.inflate(layoutInflater);
     }
 
     private var mainHelper:MainHelper?=null
 
     override fun initViews() {
         super.initViews()
-        mainHelper= MainHelper(this)
-        mainHelper!!.initBottomNavigationView(binding.bottomNavigationView,supportFragmentManager)
+        mainHelper = MainHelper(this)
+        mainHelper!!.initBottomNavigationView(binding.bottomNavigationView, supportFragmentManager)
     }
 }

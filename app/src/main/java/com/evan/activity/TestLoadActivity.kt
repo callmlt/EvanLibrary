@@ -1,10 +1,12 @@
 package com.evan.activity
 
+import androidx.lifecycle.ViewModelProvider
 import com.evan.adapter.MainItemAdapter
 import com.evan.databinding.ActivityTestLoadBinding
 import com.evan.fragment.BottomDialogFragmentTest
 import com.evan.lib.base.adapter.BaseEvanAdapter
 import com.evan.lib.util.WeakHandler
+import com.evan.lib.vm.AppViewModel
 import com.evan.model.MainModel
 import kotlinx.coroutines.GlobalScope
 import kotlinx.coroutines.delay
@@ -30,12 +32,13 @@ class TestLoadActivity:BaseKotlinActivity<ActivityTestLoadBinding>(){
     override fun initViews() {
         super.initViews()
         initHeadViews(binding.includeHead, "测试")
-        mainModel = MainModel()
+        mainModel = AppViewModel.getViewModel(MainModel::class.java)
 
         setLinearLayoutManager(binding.mRecyclerView)
         adapter = MainItemAdapter(list)
         binding.mRecyclerView.adapter = adapter
         weakHandler = WeakHandler();
+
 
         //weakHandler 的使用
         weakHandler!!.postDelayed(Runnable {
@@ -49,7 +52,6 @@ class TestLoadActivity:BaseKotlinActivity<ActivityTestLoadBinding>(){
                 position == 2 -> showLoadingDialog()
                 position == 3 -> dismissLoadingDialog()
             }
-            this.mainModel?.login("15915459025", "12133131");
         })
         setSwipeBackEnable(false)
     }

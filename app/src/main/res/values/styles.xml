@@ -9,10 +9,10 @@
     </style>
 
     <!--重写右侧滑动返回样式-->
-    <style name="SwipeBackLayout">
+   <!-- <style name="SwipeBackLayout">
         <item name="edge_size">10dp</item>
         <item name="shadow_left">@mipmap/shadow_left</item>
         <item name="shadow_right">@mipmap/shadow_right</item>
         <item name="shadow_bottom">@mipmap/shadow_bottom</item>
-    </style>
+    </style>-->
 </resources>
