@@ -21,17 +21,12 @@ import androidx.core.content.ContextCompat
 object AppUtil {
 
     lateinit var context: Context
-    var activity: Activity? = null
 
     /**
      * 在Application中初始化
      */
     fun init(app: Application) {
         context = app
-    }
-
-    fun setCurrentActivity(activity: Activity) {
-        this.activity = activity
     }
 
     /**

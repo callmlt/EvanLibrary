@@ -51,7 +51,10 @@ class TestLoadActivity:BaseKotlinActivity<ActivityTestLoadBinding>(){
             }
             this.mainModel?.login("15915459025", "12133131");
         })
+        setSwipeBackEnable(false)
     }
+
+
 
     override fun initData() {
         super.initData()
