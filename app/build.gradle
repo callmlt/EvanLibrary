@@ -57,11 +57,10 @@ dependencies {
     implementation 'androidx.constraintlayout:constraintlayout:2.0.1'
 
 
-
     implementation project(":evanlib")
     implementation "org.jetbrains.kotlin:kotlin-stdlib:$kotlin_version"
     //加载框
-    //implementation 'com.github.callmlt:EvanLibrary:1.1'
+    //implementation 'com.github.callmlt:EvanLibrary:1.2'
 }
 repositories {
     mavenCentral()

@@ -39,7 +39,6 @@
     <uses-feature android:name="android.hardware.camera.autofocus"/>
 
     <application>
-        <activity android:name=".activity.BaseEvanActivity"/>
     </application>
 
 </manifest>

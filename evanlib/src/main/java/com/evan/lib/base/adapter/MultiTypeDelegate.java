@@ -1,4 +1,4 @@
-package com.evan.lib.adapter;
+package com.evan.lib.base.adapter;
 
 import android.util.SparseIntArray;
 import androidx.annotation.LayoutRes;

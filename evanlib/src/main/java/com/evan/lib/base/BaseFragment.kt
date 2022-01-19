@@ -6,7 +6,7 @@ import android.view.View
 import android.view.ViewGroup
 import androidx.fragment.app.Fragment
 import androidx.viewbinding.ViewBinding
-import com.evan.lib.view.EvanLoadDialog
+import com.evan.lib.view.dialog.EvanLoadDialog
 
 /**
  * @description: 所有Fragment的基类

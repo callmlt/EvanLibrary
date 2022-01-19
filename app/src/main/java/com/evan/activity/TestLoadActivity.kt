@@ -3,7 +3,7 @@ package com.evan.activity
 import com.evan.adapter.MainItemAdapter
 import com.evan.databinding.ActivityTestLoadBinding
 import com.evan.fragment.BottomDialogFragmentTest
-import com.evan.lib.adapter.BaseEvanAdapter
+import com.evan.lib.base.adapter.BaseEvanAdapter
 import com.evan.lib.util.WeakHandler
 import com.evan.model.MainModel
 import kotlinx.coroutines.GlobalScope

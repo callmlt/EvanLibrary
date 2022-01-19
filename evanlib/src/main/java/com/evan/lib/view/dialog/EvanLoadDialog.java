@@ -1,4 +1,4 @@
-package com.evan.lib.view;
+package com.evan.lib.view.dialog;
 
 import android.app.Dialog;
 import android.content.Context;

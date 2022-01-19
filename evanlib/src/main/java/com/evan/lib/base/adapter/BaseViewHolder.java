@@ -1,4 +1,4 @@
-package com.evan.lib.adapter;
+package com.evan.lib.base.adapter;
 
 import android.graphics.Bitmap;
 import android.graphics.Paint;
