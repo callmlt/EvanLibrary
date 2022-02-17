@@ -7,6 +7,7 @@ https://github.com/ybq/Android-SpinKit
 https://jitpack.io
 
 ###Kotlin的硬关键宇包括:
+
     as一一 用于做类型转换或为 import 语句指定别名
     as?一一类型安全 的类型转换运算符。
     break一一中断循环
@@ -36,6 +37,7 @@ https://jitpack.io
     val 一声明只读属性或变量。
     var一一声明可变属性或变量。
     when一一用于 when 表达式。while一一－用于 while 循环或 do while 循环
+    
 ###Kotlin 的软关键宇包括：
     by一一用于将接口或祖先类的实现代理给其他对象。
     catch 一一在异常处理中用于捕捉异常
