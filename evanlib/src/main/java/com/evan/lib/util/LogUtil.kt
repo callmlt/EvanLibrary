@@ -9,13 +9,13 @@ import android.util.Log
  */
 object LogUtil {
     var isDebug = true
-    var TAG = LogUtil.javaClass.simpleName;
+    private var TAG = LogUtil.javaClass.simpleName;
 
     fun i(msg: String) {
-        if (!isDebug) {
-            return
-        }
         i(TAG, msg);
+    }
+    fun e(msg: String) {
+        e(TAG, msg);
     }
 
     fun i(tag: String, msg: String) {
@@ -31,12 +31,4 @@ object LogUtil {
         }
         Log.e(tag, msg)
     }
-
-    fun e(msg: String) {
-        if (!isDebug) {
-            return
-        }
-        e(TAG, msg);
-    }
-
 }

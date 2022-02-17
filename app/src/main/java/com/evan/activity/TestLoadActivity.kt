@@ -5,6 +5,8 @@ import com.evan.adapter.MainItemAdapter
 import com.evan.databinding.ActivityTestLoadBinding
 import com.evan.fragment.BottomDialogFragmentTest
 import com.evan.lib.base.adapter.BaseEvanAdapter
+import com.evan.lib.util.LogUtil
+import com.evan.lib.util.ToastUtil
 import com.evan.lib.util.WeakHandler
 import com.evan.lib.vm.AppViewModel
 import com.evan.model.MainModel
@@ -42,7 +44,8 @@ class TestLoadActivity:BaseKotlinActivity<ActivityTestLoadBinding>(){
 
         //weakHandler 的使用
         weakHandler!!.postDelayed(Runnable {
-
+            LogUtil.e("postDelayed")
+            ToastUtil.showToast(this.applicationContext,"postDelayed")
         }, 5000)
 
         adapter!!.setOnItemClickListener(BaseEvanAdapter.OnItemClickListener { adapter, view, position ->
@@ -50,7 +53,6 @@ class TestLoadActivity:BaseKotlinActivity<ActivityTestLoadBinding>(){
                 position == 0 -> mainModel?.login("156116565", "4564654")
                 position == 1 -> BottomDialogFragmentTest().show(supportFragmentManager, "sdfsdf")
                 position == 2 -> showLoadingDialog()
-                position == 3 -> dismissLoadingDialog()
             }
         })
         setSwipeBackEnable(false)

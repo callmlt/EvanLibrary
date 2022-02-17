@@ -30,17 +30,6 @@ object AppUtil {
     }
 
     /**
-     * 吐司
-     */
-    fun toast(text: String?) {
-        if (!TextUtils.isEmpty(text)) {
-            val toast = Toast.makeText(context, text, Toast.LENGTH_SHORT)
-            toast.setGravity(Gravity.CENTER, 0, 0)
-            toast.show()
-        }
-    }
-
-    /**
      * dp转px
      */
     fun dp2px(dpValue: Float): Int {

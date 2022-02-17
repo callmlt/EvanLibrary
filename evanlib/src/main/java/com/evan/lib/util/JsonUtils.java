@@ -22,17 +22,12 @@ import java.util.Map;
  * @date 2021-12-15 09:18:00
  */
 public class JsonUtils {
-
-
     private static Gson gson = null;
-
     static {
         gson = new Gson();
     }
 
     public static String toJson(Object obj) {
-
-
         if (obj == null) {
             return "";
         } else {

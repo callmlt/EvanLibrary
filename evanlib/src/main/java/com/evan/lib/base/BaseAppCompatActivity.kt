@@ -3,8 +3,6 @@ package com.evan.lib.base
 import android.os.Bundle
 import android.view.View
 import androidx.appcompat.app.AppCompatActivity
-import androidx.lifecycle.ViewModel
-import androidx.lifecycle.ViewModelProvider
 import androidx.viewbinding.ViewBinding
 import com.evan.lib.R
 import com.evan.lib.databinding.CommonTitleViewBinding
@@ -143,10 +141,9 @@ abstract class BaseAppCompatActivity<T : ViewBinding> : AppCompatActivity(), Swi
      * @param title 标题
      */
     protected fun initHeadViews( commonTitleViewBinding: CommonTitleViewBinding,title: String ) {
-        commonTitleViewBinding.titleTx.text=title;
-        commonTitleViewBinding.backImg.setOnClickListener {
+        initHeadViews(commonTitleViewBinding,title,View.OnClickListener{
             finish()
-        }
+        })
     }
 
     /**
