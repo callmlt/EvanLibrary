@@ -39,6 +39,7 @@ https://jitpack.io
     when一一用于 when 表达式。while一一－用于 while 循环或 do while 循环
     
 ###Kotlin 的软关键宇包括：
+
     by一一用于将接口或祖先类的实现代理给其他对象。
     catch 一一在异常处理中用于捕捉异常
     constructor一一用于声明构造器。
